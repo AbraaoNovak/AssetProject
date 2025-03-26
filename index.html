@@ -1,86 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Asset Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/Style/Style.css">
+  <title>Leilão da JEM</title>
+
 </head>
-
 <body>
-    <header>
-        <div class="cabecalho">
-            <img src="/Images/logo_com_nome.svg" class="logo">
-        </div>
-    </header>
 
-    <main>
-        <section class="titulo__assets">
-            <h2 class="titulo">Asset Form</h2>
-            <p class="descricao">Please enter the asset numbers correctly. Add observations if necessary.</p>
-        </section>
+  <div class="auction-item">
+    <img src="/Produtos/images.jpg" alt="Imagem do Item" class="item-image">
+    <div class="item-details">
+      <h2>Item 1: Produto Exemplo</h2>
+      <p>Descrição do produto que está sendo leiloado. Pode ser qualquer tipo de item que você deseja vender.</p>
+    </div>
 
-        <div class="form-container">
-            <form id="assetForm">
-                <div class="form-group">
-                    <label for="equipment">Equipments:</label>
-                        <select id="equipment" name="equipment">
-                            <option value="" disabled selected>Choose Equipment</option>
-                            <option value="laptop">Laptop</option>
-                            <option value="keyboard">Keyboard</option>
-                            <option value="mouse">Mouse</option>
-                            <option value="screen">Screen</option>
-                            <option value="headset">Headset</option>
-                        </select>
-                </div>
+    <div class="bid-info">
+      <p>Maior Lance: <span id="highest-bid">R$ 100,00</span></p>
+      <p>Vencedor: <span id="highest-bidder">João Silva</span></p>
+    </div>
 
-                <div class="form-group">
-                    <label for="asset">Asset:</label>
-                    <input type="text" id="asset" name="asset" placeholder="Asset">
-                </div>
+    <div class="bidder">
+      <input type="text" id="bid-amount" class="bid-input" placeholder="Seu lance (R$)">
+      <input type="text" id="bidder-name" class="bid-input" placeholder="Seu nome">
+      <button class="submit-bid" onclick="submitBid()">Dar Lance</button>
+    </div>
+  </div>
 
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                </div>
-
-                <div class="form-group">
-                    <label for="department">Department:</label>
-                    <select id="department" name="department">
-                        <option value="" disabled selected>Choose Department</option>
-                        <option value="HR">HR</option>
-                        <option value="IT">IT</option>
-                        <option value="BIM">BIM</option>
-                        <option value="CAD">CAD</option>
-                        <option value="Customer Service">Customer Service</option>
-                        <option value="Sales">Sales</option>
-                        <option value="Online Sales">Online Sales</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Executive">Executive</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="observation">Observation:</label>
-                    <textarea id="observation" name="observation" rows="4"></textarea>
-                </div>
-                
-
-
-                <div class="add-more-container">
-                    <button id="addMoreButton" class="add-more-button">+</button>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
-        </div>
-    </main>
-
-<script src="/Script/botaoadicionar.js"></script>
 </body>
-
 </html>
